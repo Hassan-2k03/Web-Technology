@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <!--Internaland External-->
+    <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
+    <style>
+      h3 {
+        width: 300px;
+        border-left: 5px solid black;
+        border-right: 5px solid black;
+        border-top: 10px dotted blue;
+        border-bottom: 7px dotted blue;
+        margin-left: 25 px;
+        margin-right: 25px;
+        top: 1px;
+      }
+      h4 {
+        width: 350px;
+        border: 5px solid black;
+        border-radius: 15px;
+        border-style: double;
+      }
+      h5 {
+        text-shadow: 4px 4px 6px red;
+      }
+      p {
+        color: brown;
+      }
+      #p1 {
+        color: blue;    
+      }
+      .pcls1 {
+        color: green;
+      }
+      div {
+        width: 320px;
+        padding: 10px;
+        border: 5px solid gray;
+        margin: 0;
+      }
+      div > span {
+        color: yellow;
+      }
+      div.dcls p {
+        color: blue;
+      }
+      a:visited {
+        font-size: 12px;
+        font-weight: bold;
+        color: blue;
+      }
+      a:active {
+        color: yellow;
+      }
+      h5:hover {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Inline-->
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+
+    <p style="color: red; font-size: 150%">Paragraph 1</p>
+    <p id="p1">Paragraph 2</p>
+    <p class="pcls1">Paragraph 3</p>
+    <p style="width: 20%;">
+      Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1
+      Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1
+      Paragraph 1
+    </p>
+
+    <p style="width: 20%; height: 50px; overflow: scroll">
+      Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1
+      Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1
+      Paragraph 1
+    </p>
+
+    <div class="dcls">
+      <span class="s1">Span 1 in div</span>
+      <span class="s2"
+        >Span 2 in div
+        <p>Paragraph within div</p>
+      </span>
+    </div>
+
+    <p>paragraph ouside div</p>
+
+    <p>
+      Paragraph for
+      <span style="background: yellow; color: red"> span element</span>example
+    </p>
+
+    <a href="http://www.google.com">Click</a>
+
+    
+	<ul style="list-style-type:square">
+				<li>line 1</li>
+				<li>line 2</li>
+			</ul>
+	<ol type="a">
+				<li>line 1</li>
+				<li>line 2</li>
+			</ol>
+			<ol type="I" start="21">
+				<li>line 1</li>
+				<li>line 2</li>
+			</ol>
+			<table border="1px solid color">
+			<caption>Subject list</caption>	
+		<tr style="background:yellow">
+		<td>Sub1</td>
+			<td>DSA</td>
+		</tr>
+		<tr style="color:red">
+		<td>Sub2</td>
+			<td>DSA</td>
+		</tr>
+		</table>
+		</body>
+</html>
