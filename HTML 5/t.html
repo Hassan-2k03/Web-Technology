@@ -1,0 +1,27 @@
+<html>
+  <body onload="prg()">
+    <p>AUDIO</p>
+    <audio controls>
+      <source src="Another_Day_Instrumental.mp3" type="audio/mp3" />
+    </audio>
+
+    <p>VIDEo</p>
+    <video controls>
+      <!-- autoplay mute, starts playing video muted -->
+      <source src=" " type=" " />
+    </video>
+
+    <p>Progress Bar</p>
+    <label>Progress: </label>
+    <progress id="p1" value="30" max="100">30%</progress>
+    <script>
+      var p = document.querySelector("#p1");
+      function prg() {
+        p.value += 20;
+        if (p.value != 100) {
+          setTimeout(prg, 1000);
+        }
+      }
+    </script>
+  </body>
+</html>
