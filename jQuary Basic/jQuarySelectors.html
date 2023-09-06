@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>jQuary</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <p id="p1">Paragraph 1 with id</p>
+    <p class="pcls">Paragraph 2 with class</p>
+    <script>
+      $(document).ready(function () {
+        $("p").css("color", "red");
+        $("#p1").css("background-color", "yellow");
+        $("p.pcls").css("backgroundColor", "cyan");
+
+        $("li:first").css("background-color", "coral");
+        $("li:last").css("background-color", "coral");
+        $("li:even").css("background-color", "green");
+        $("li:odd").css("background-color", "red");
+
+        newli = document.createElement("li");
+        $(newli).html("Sub 6");
+        // $("li:last").append(newli);
+        // $("li:last").after("<li>Sub 6</li>");
+        $("li:last").before(newli);
+        $("li:even").css("color", "blue").slideUp(2000).slideDown(2000);
+      });
+    </script>
+
+    <!-- list -->
+    <ul id="l1">
+      <li id="s1">Sub 1</li>
+      <li>Sub 2</li>
+      <li>Sub 3</li>
+      <li>Sub 4</li>
+      <li>Sub 5</li>
+    </ul>
+  </body>
+</html>

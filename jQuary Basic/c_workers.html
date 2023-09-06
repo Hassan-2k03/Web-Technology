@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Web Worker</title>
+  </head>
+  <body>
+    <h1>Web Worker</h1>
+    <p>Count Number:<output id="result"></output></p>
+    <button onclick="start()">START</button>
+    <button onclick="stop()">STOP</button>
+
+    <script>
+      var w;
+      function start() {
+        w = new Worker("c_worker.js");
+        w.onmessage = function (event) {
+          document.getElementById("result").innerHTML = event.data;
+        };
+      }
+      function stop() {
+        w.terminate();
+        w = undefined;
+      }
+    </script>
+  </body>
+</html>

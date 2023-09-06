@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <p id="p1">Paragraph 1 with id</p>
+    <p class="pcls">Paragraph 2 with class</p>
+    <button>CLICK</button>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("p").hide();
+        });
+      });
+      $(document).ready(function () {
+        $("p").click(function () {
+          $(this).hide();
+        });
+      });
+    </script>
+  </body>
+</html>
