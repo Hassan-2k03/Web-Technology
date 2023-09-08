@@ -1,0 +1,33 @@
+body {
+    background-color: paleturquoise;
+}
+#peslogo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1,h2 {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 30px;
+    color: black;
+}
+fieldset {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: 1px solid black;
+    /* make cornors rounded */
+    border-radius: 10px;
+}
+#tab1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 70%;
+    border: 1px solid grey;
+    border-collapse: collapse;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    color: black;
+}

@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <title>PES University</title>
+  </head>
+
+  <link rel="stylesheet" type="text/css" href="Forms.css" />
+
+  <body>
+    <img
+      src="pes_logo.png"
+      alt="pes_logo"
+      height="150"
+      width="300"
+      id="peslogo"
+    />
+    <h2>ESA Re-evaluation</h2>
+    <fieldset style="padding: 100px; color: whitesmoke" id="fs">
+      <form id="surveyForm" onsubmit="return submitForm();">
+        <table border="10px solid color" id="tab1">
+          <caption>
+            <h3></h3>
+          </caption>
+          <tbody>
+            <tr>
+              <th>First Name:</th>
+              <td><input type="text" id="fname" /></td>
+            </tr>
+            <tr>
+              <th>Last Name:</th>
+              <td><input type="text" id="lname" /></td>
+            </tr>
+            <tr>
+              <th>SRN:</th>
+              <td>
+                <input type="text" id="srn" placeholder="PES_UG__CS___" />
+              </td>
+            </tr>
+            <tr>
+              <th>Email:</th>
+              <td>
+                <input
+                  type="email"
+                  name="mail"
+                  placeholder="example@abc.com"
+                  required=""
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>Phone Number:</th>
+              <td>
+                <input
+                  type="tel"
+                  name="phno"
+                  placeholder="10 digits"
+                  pattern="[0-9]{10}"
+                  required=""
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <th>Gender:</th>
+              <td>
+                <input type="radio" name="gen" value="m" />Male
+                <input type="radio" name="gen" value="f" />Female
+                <input type="radio" name="gen" value="m" />Other <br /><br />
+              </td>
+            </tr>
+            <tr>
+              <th>Subjects:</th>
+              <td>
+                <input type="checkbox" name="hbox" value="ddco" /> UE22CS251A :
+                Digital Design and Computer Organization <br />
+                <input type="checkbox" name="hbox" value="dsa" /> UE22CS252A :
+                Data Structures and its Applications <br />
+                <input type="checkbox" name="hbox" value="wt" /> UE22CS242A :
+                Web Technologies <br />
+                <input type="checkbox" name="hbox" value="sds" /> UE22CS241A :
+                Statistics for Data Science <br />
+                <input type="checkbox" name="hbox" value="afll" /> UE22CS243A :
+                Automata Formal Languages and Logic <br />
+              </td>
+            </tr>
+            <tr>
+              <th>Fee Payment Method:</th>
+              <td>
+                <select name="pay">
+                  <option value="upi">UPI</option>
+                  <option value="nb">Net Banking</option>
+                  <option value="card">Debit/Credit Card</option>
+                  <option value="neft">NEFT</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br /><br />
+        <input type="submit" value="Submit" id="sf" />
+        <input type="reset" value="Reset" />
+      </form>
+      <script>
+        function submitForm() {
+          alert("Form Submitted Successfully");
+          return true;
+        }
+      </script>
+    </fieldset>
+  </body>
+</html>
