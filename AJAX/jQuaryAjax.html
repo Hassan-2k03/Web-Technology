@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <!-- jQuary source -->
+    
+  </head>
+  <body>
+    <script>
+      function getdata() {
+        //Jquery-ajax()
+        /* $.ajax({
+                    url:"files/sample.txt",
+                    method:"GET",
+                    success:function(result)
+                    {
+                        $("#div1").html(result);
+                    }
+                });*/
+
+        //Jquery-get()
+        /*  $.get("files/sample.txt",function(data,status)
+                    {
+                        alert("Data:"+data+" "+"Status:"+status);
+                    });*/
+
+        /*$.getJSON('files/sample.json',
+					{name:'XYZ', srn:'XYZ789'},
+					function (result,status,xhr){
+						$("#div1").html(result.name+" "+status);
+					});*/
+
+        //Jquery-post()
+        $.post(
+          "https://jsonplaceholder.typicode.com/posts",
+          {
+            body: "Post data",
+          },
+          function (data, status) {
+            alert("Successfull");
+          },
+          "json"
+        );
+
+        //Jquery-load()
+        $("#div1").load("files/sample.txt", function (result, status, xhr) {
+          console.log("Status:" + status);
+        });
+      }
+    </script>
+    <button onclick="getdata()">GET DATA</button>
+    <br />
+    <div id="div1"></div>
+  </body>
+</html>
