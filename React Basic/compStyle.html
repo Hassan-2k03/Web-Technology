@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <script type="text/babel">
+      function Header() {
+        //return <h1 style={{ color: "red" }}>Hello World</h1>;
+        const myStyle = {
+          color: "red",
+          backgroundColor: "yellow",
+          padding: "10px",
+        };
+        return <h1 style={myStyle}>Hello World using myStyle</h1>;
+      }
+      const container = document.getElementById("div1");
+      const root = ReactDOM.createRoot(container);
+      root.render(<Header />);
+    </script>
+    <div id="div1"></div>
+  </body>
+</html>
