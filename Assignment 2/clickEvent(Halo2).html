@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Click Event</title>
+    </head>
+    <body>
+        <style>
+            #div1{
+                text-align: center;
+            }
+        </style>
+        <div id="div1">
+            <h1 id="h1">[click on header]Halo 2 video game</h1>
+            <p id="p">[click on paragraph]price $50.00</p>
+        </div>
+        <script>
+            var h1 = document.getElementById("h1");
+            var p = document.getElementById("p");
+            h1.addEventListener("click", function(){
+                alert("the discount sale is going to end");
+            }, true);
+            p.addEventListener("click", function(){
+                p.style.color = "red";
+                p.style.fontSize = "30px";
+            }, false);
+        </script>
+    </body>
+</html>
