@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <style>
+      .cls {
+        background-color: red;
+        font: size 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="p1">Paragraph 1 with ID</p>
+    <p class="pcls">Paragraph 2 with CLASS</p>
+    <!-- <input type="text" id="t1" value="Wt" /> -->
+
+    <!-- <div
+      id="d1"
+      style="
+        height: 100px;
+        width: 150px;
+        background-color: green;
+        position: fixed;
+      "
+    ></div> -->
+
+    <input type="text" value="Hello" />
+    <input type="text" value="Hi" />
+    <input type="text" value="Hola" />
+    <input type="text" value="sup" />
+
+    <button>CLICK</button>
+    <script>
+      $(document).ready(function () {
+        /*  $("button").click(function () {
+          $("p").hide();
+        });
+      });
+      $(document).ready(function () {
+        $("p").click(function () {
+          $(this).hide();
+        });
+      }); */
+        // $("button").click(function () {
+        //   $("p:contains(CLASS)").css("color", "red");
+        // });
+        // $("button").click(function () {
+        //   $("#p1").empty();
+        // });
+        // $("button").click(function () {
+        //   $("#p1").addClass("cls");
+        // });
+        // $("button").click(function () {
+        //   //alert("text: " + $("#p1").text());
+        //   //alert("html: " + $("#p1").html());  // text or html
+        //   //alert("Value:"+ $("#t1").val());  // textbox value
+        // });
+
+        // $("#p1").on("click",function (event) {
+        //   $(event.target).css("background-color","yellow");
+        // })
+        // $(".pcls").on("click mouseover",function (event) {
+        //   $(event.target).css("background-color","cyan");
+        // })
+
+        // $("button").click(function () {
+        //   $("div").animate({
+        //     left: "250px",
+        //     height: "150px",
+        //     width: "150px"
+        //   });
+        $("button").click(function () {
+          $("input[name~='hi']").val("h is present");
+        });
+      });
+    </script>
+  </body>
+</html>

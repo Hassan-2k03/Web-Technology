@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <script>
+      var pro = new Promise(function (Resolve, Reject) {
+        const x = "apple";
+        const y = "apple";
+        if (x === y) {
+          Resolve();
+        } else {
+          Reject();
+        }
+      });
+      pro
+        .then(function (value) {
+          console.log("success");
+        })
+        .catch(function (error) {
+          console.log("error");
+        });
+    </script>
+  </body>
+</html>
