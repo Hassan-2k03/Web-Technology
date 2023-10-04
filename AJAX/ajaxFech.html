@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>jQuery Ajax</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <script>
+      function fetchData() {
+          document.querySelector("#div1");
+          fetch("files/sample.txt")
+              .then(function(response) {
+                  return response.text();
+              })
+              .then(function (text) {
+                    console.log(text);
+                    document.querySelector("#div1").innerHTML = text;
+              })
+              .catch(function (error) {
+                  console.log("Error");
+              });
+          }
+    </script>
+    <button onclick="fetchData()">Fetch DATA</button>
+    <br />
+    <div id="div1"></div>
+  </body>
+</html>
