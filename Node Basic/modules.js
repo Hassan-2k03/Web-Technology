@@ -18,13 +18,16 @@ console.log(data.toString());
 console.log("Ended");
  */
 
-var fs = require("fs");
-var data = fs.readFile('C:\Users\mh192\OneDrive\Documents\Semester 3\Web-Technology\Node Basic\test.txt', function (err, data) {
-    if (err)
-        return console.log("Error");
-    else
-        console.log(data.toString());
-    setTimeout(() => { 
-        console.log("Ended");
-    }, 2000);
-    
+//assert module 
+
+/* var assert = require("assert");
+let y=5;
+let x=6;
+
+try{
+    assert(x>y);
+}
+catch{
+    console.log("Error");
+} */
+
