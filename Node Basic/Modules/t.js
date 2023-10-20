@@ -1,4 +1,4 @@
-var chk = require('chalk')
+var chk = require('chalk');
 console.log(chk.blue('Hello world!'));
 console.log(chk.red('Hello world!'));
 console.log(chk.green('Hello world!'));
