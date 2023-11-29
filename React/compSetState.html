@@ -1,39 +1,42 @@
 <html>
-    <head>
-        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    </head>
-    <body>
-        <div id="container"></div>
-        <script type="text/babel">
-            class Student extends React.Component{
-                constructor(){
-                    super();
-                    this.state = {
-                        name: "abc",
-                        srn: "123",
-                        sem: "3"
-                    };
-                }
-                changeValue = () => {
-                    this.setState({
-                        name: "xyz",
-                    });
-                }
-                render(){
-                    return(
-                        <div>
-                            <h2>Name:{this.state.name}</h2>
-                            <h2>SRN: {this.state.srn}</h2>
-                            <h2>Sem: {this.state.sem}</h2>
-                            <button type="button" onClick={this.changeValue}>change name</button>
-                        </div>
-                    );
-                }
-            }
-            ReactDOM.render(<Student />, document.querySelector("#container"));
 
-        </script>            
-    </body>
+<head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="container"></div>
+    <script type="text/babel">
+        class Student extends React.Component {
+            constructor() {
+                super();
+                this.state = {
+                    name: "abc",
+                    srn: "123",
+                    sem: "3"
+                };
+            }
+            changeValue = () => {
+                this.setState({
+                    name: "xyz",
+                });
+            }
+            render() {
+                return (
+                    <div>
+                        <h2>Name:{this.state.name}</h2>
+                        <h2>SRN: {this.state.srn}</h2>
+                        <h2>Sem: {this.state.sem}</h2>
+                        <button type="button" onClick={this.changeValue}>change name</button>
+                    </div>
+                );
+            }
+        }
+        ReactDOM.render(<Student />, document.querySelector("#container"));
+
+    </script>
+</body>
+
 </html>
