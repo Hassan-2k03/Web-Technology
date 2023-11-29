@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="container"></div>
+        <script type="text/babel">
+            const arr=["one","two","three"]
+            function numbers(props) {
+                arr_list=props.ar1
+                const a=arr_list.map((num,index)=>
+                    <li key={index}>{num}</li>
+                );
+            }
+            ReactDOM.render(
+                <Number ar1 = {arr}/>,
+                document.getElementById("container")
+            );
+        </script>
+    </body>
+</html>

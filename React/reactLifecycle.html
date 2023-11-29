@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="container"></div>
+        <script type="text/babel">
+            class Hello extends React.Component {
+                constructor(props) {
+                    console.log("In constructor");
+                    {
+                        super(props);
+                        this.state = {
+                            name:"abc",
+                            phno:"1234567890",
+                            address:"blr"
+                        };
+                    }
+                }
+                UNSAFE_componentWillMount() {
+                    console.log("In componentWillMount");
+                }
+                componentDidMount() {
+                    console.log("In componentDidMount");
+                }
+                componentDidUpdate() {
+                    console.log("In componentDidUpdate");
+                }
+                shouldComponentUpdate() {
+                    console.log("In shouldComponentUpdate");
+                    return true;
+                }
+                shouldComponentUpdate(nextProps, nextState) {
+                    console.log("In shouldComponentUpdate");
+                    return true;
+                }                
+                componentWillUnmount() {
+                    console.log("In componentWillUnmount");
+                }
+                funDelete = () => {
+                    console.log("In funDelete");
+                    ReactDOM.unmountComponentAtNode(document.getElementById('container'));
+                }
+                funUpdate = () => {
+                    console.log("In funUpdate");
+                    this.setState({
+                        name:"xyz",
+                        phno:"9876543210",
+                        address:"hyd"
+                    });
+                }
+                render() {
+                    console.log("In render");
+                    return (
+                        <div>
+                            <h1>Hello {this.state.name}</h1>
+                            <h2>Phno {this.state.phno}</h2>
+                            <h2>Address {this.state.address}</h2>
+                            <button onClick = {this.funUpdate}>State Update</button>
+                            <button onClick = {this.funDelete}>State del</button>
+                        </div>                        
+                    );
+                }
+            }
+            ReactDOM.render(<Hello />, document.getElementById('container'));
+        </script>
+    </body>
+</html>
